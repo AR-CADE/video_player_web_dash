@@ -375,14 +375,14 @@ class VideoPlayer {
       return true;
     }
 
-    return _testIfHls();
+    return _testIfDash();
   }
 
   bool get _isDash => uri.contains('mpd');
 
   bool get _isDashSupported => html.MediaSource.supported;
 
-  Future<bool> _testIfHls() async {
+  Future<bool> _testIfDash() async {
     try {
       final headers = Map<String, String>.of(this.headers);
       if (headers.containsKey('Range') || headers.containsKey('range')) {
