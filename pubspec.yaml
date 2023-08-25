@@ -1,0 +1,31 @@
+name: video_player_web_dash
+description: Web platform implementation of video_player and supports dash on chrome and other browsers.
+homepage: https://github.com/AR-CADE/video_player_web_dash
+publish_to: none
+
+version: 1.0.0
+
+flutter:
+  plugin:
+    platforms:
+      web:
+        pluginClass: VideoPlayerPluginDash
+        fileName: video_player_web_dash.dart
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  http: ^1.0.0
+  js: ^0.6.3
+  video_player_platform_interface: ">=6.1.0 <7.0.0"
+
+dev_dependencies:
+  flutter_lints: ^2.0.2
+  flutter_test:
+    sdk: flutter
+
+environment:
+  sdk: ">=2.18.0 <4.0.0"
+  flutter: ">=3.3.0"
